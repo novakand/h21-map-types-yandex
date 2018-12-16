@@ -1,7 +1,6 @@
-
-{
-  "name": "@types/h21-map-yandex",
-  "version": "1.0.2",
+  "name": "@h21-map/types-google-yandex",
+  "version": "1.0.4",
+  "scope":"@h21-map",
   "description": "A library of Yandex Map JS API",
   "main": "index.js",
   "scripts": {
@@ -9,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/novakand/h21-map-types-yandex"
+    "url": "git+https://github.com/novakand/h21-map-types-google"
   },
   "keywords": [
     "yandex",
@@ -18,6 +17,5 @@
     "angular"
   ],
   "author": "",
-  "license": "",
-  "homepage": ""
+  "license": ""
 }
