@@ -1,4 +1,4 @@
-  "name": "@h21-map/types-google-yandex",
+  "name": "@h21-map/types-yandex",
   "version": "1.0.4",
   "scope":"@h21-map",
   "description": "A library of Yandex Map JS API",
