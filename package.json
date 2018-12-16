@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/novakand/h21-map-types-google"
+    "url": "git+https://github.com/novakand/h21-map-types-yandex"
   },
   "keywords": [
     "yandex",
