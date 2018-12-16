@@ -1,8 +1,8 @@
-## @h21-map/types-google-yandex
+## @h21-map/types-yandex
 
 ## Installation
 ```bash
-npm i @h21-map/types-google-yandex
+npm i @h21-map/types-yandex
 ```
 ### Details
 ```bash
