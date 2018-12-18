@@ -1,11 +1,10 @@
-  "name": "@h21-map/types-yandex",
-  "version": "1.0.4",
+{"name": "@h21-map/types-yandex",
+  "version": "1.0.5",
   "scope":"@h21-map",
-  "description": "A library of Yandex Map JS API",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "TypeScript definitions for Google Map",
+    "scripts": {},
+ "main":"",
+  "types": "index"
   "repository": {
     "type": "git",
     "url": "git+https://github.com/novakand/h21-map-types-yandex"
