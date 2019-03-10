@@ -8,7 +8,7 @@ declare namespace ymaps {
   interface IClassConstructor<T> {
     new(): T;
   }
-  
+
   type ControlSingleKey = "fullscreenControl" | "geolocationControl" | "routeEditor" | "rulerControl" | "searchControl" | "trafficControl" | "typeSelector" | "zoomControl";
   type ControlSetKey = "smallMapDefaultSet" | "mediumMapDefaultSet" | "largeMapDefaultSet" | "default";
   type ControlKey = ControlSingleKey | ControlSetKey;
@@ -23,7 +23,7 @@ declare namespace ymaps {
   type InteractivityModelKey = "default#opaque" | "default#geoObject" | "default#layer" | "default#transparent" | "default#silent" | string;
 
   type PresetKey = string;
-  
+
   namespace behavior {
     class DblClickZoom implements IBehavior {
       constructor(options?: IDblClickZoomOptions);
@@ -119,6 +119,9 @@ declare namespace ymaps {
       getRoute(): router.Route;
       getState(): string;
       setState(state: string | null): void;
+    }
+    class DrawingManager {
+
     }
 
     class Ruler implements IBehavior {
@@ -454,7 +457,7 @@ declare namespace ymaps {
       getRequestString(): string;
       getResponseMetaData(): object;
       getResult(index: number): Promise<object>;
-      getResultsArray(): object[];
+      getResultsArray(): any[];
       getResultsCount(): number;
       getSelectedIndex(): number;
       hideResult(): void;
@@ -1313,6 +1316,10 @@ declare namespace ymaps {
     fire(type: string, eventobject: object | IEvent): this;
   }
 
+  class DrawingManager{
+    constructor(map: Map, options?: any);
+  }
+
   interface IBalloonOptions {
     autoPan?: boolean;
     autoPanCheckZoomRange?: boolean;
@@ -1391,6 +1398,7 @@ declare namespace ymaps {
   }
 
   class Clusterer implements IChildOnMap, ICustomizable, IEventEmitter, IParentOnMap {
+    [x: string]: any;
     constructor(options?: IClustererOptions);
     events: IEventManager;
     options: IOptionManager;
@@ -1906,7 +1914,22 @@ declare namespace ymaps {
     suggest(request: string, options?: { boundedBy?: number[][], results?: number, strictBounds?: boolean }): Promise<object>;
   }
 
+  function geocode(request: string | number[], options?: GeocodeOptions): Promise<any>;
+
+  class GeocodeOptions {
+    boundedBy: number[][];
+    json: boolean;
+    kind: "house" | "street" | "metro" | "district" | "locality";
+    provider: "yandex#map" | "yandex#publicMap";
+    results: number;
+    searchCoordOrder: string;
+    skip: number;
+    strictBounds: boolean;
+
+  }
+
   interface IGeometry extends IBaseGeometry, ICustomizable {
+    [x: string]: any;
     getMap(): Map | null;
     getPixelGeometry(options?: object): IPixelGeometry;
     setMap(map: Map): void;
@@ -2021,6 +2044,7 @@ declare namespace ymaps {
   type IMultiRouteReferencePoint = string | number[] | geometry.Point;
 
   interface IOptionManager extends IChild<IOptionManager>, IEventEmitter, IFreezable {
+    [x: string]: any;
     get(key: string, defaultValue: object): object;
     getAll(): object;
     getName(): string;
